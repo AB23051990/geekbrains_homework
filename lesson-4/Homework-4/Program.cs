@@ -121,8 +121,6 @@ namespace Homework_4
                 default: return "";
             }
         }
-
-
         static string HomeWork(string Work1)
         {
             Console.ForegroundColor = ConsoleColor.Red;
