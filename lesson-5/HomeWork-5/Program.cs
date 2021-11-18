@@ -5,8 +5,7 @@ using System.IO;
 namespace HomeWork_5
 {
     class Program
-    {
-        
+    {        
         static void Main (string[] args)
         {
             // Задание 1. Ввести с клавиатуры произвольный набор данных и сохранить его в текстовый файл:
