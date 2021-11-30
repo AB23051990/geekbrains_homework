@@ -42,6 +42,7 @@ namespace HomeWork_7
             Console.WriteLine("Введите число Г");
             int num2 = int.Parse(Console.ReadLine());
             Console.WriteLine(string.Format("Сумма В и Г = {0}", (object)(num1 + num2)));
+
         }
     }
 }
