@@ -232,7 +232,6 @@ namespace Homework_9
                     Console.WriteLine("Размер: {0} байт", fileInf.Length);
                 }
                 
-
             }
             catch (Exception ex)
             {
