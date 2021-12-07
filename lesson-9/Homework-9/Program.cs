@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 
 namespace Homework_9
+
 {    /* Курсовой проект
      1. Просмотр файловой структуры
      2. Поддержка копирование файлов, каталогов
@@ -25,7 +26,6 @@ namespace Homework_9
 
     class Program
     {
-
         static void Main(string[] args)
         {
             while (true)
@@ -230,8 +230,7 @@ namespace Homework_9
                     Console.WriteLine("Время создания: {0}", fileInf.CreationTime);
                     Console.SetCursorPosition(50, 4);
                     Console.WriteLine("Размер: {0} байт", fileInf.Length);
-                }
-                
+                }                
             }
             catch (Exception ex)
             {
