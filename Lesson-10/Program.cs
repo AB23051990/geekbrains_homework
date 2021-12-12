@@ -28,14 +28,16 @@ namespace Lesson_10
             }
             if (d == 0)
             {
-                Console.WriteLine($"число '{number}' простое");
+                Console.WriteLine($"число '{number}' простое");// вывод первого задания на консоль ()
             }
             else
             {
-                Console.WriteLine($"число '{number}' не простое");
+                Console.WriteLine($"число '{number}' не простое");// вывод первого задания на консоль
             }
+
             Console.WriteLine($"\nЗадание 2:");
-            Console.WriteLine($"Асимптотическая сложность функции = O(5 + N^3).");
+            Console.WriteLine($"Асимптотическая сложность функции = O(5 + N^3).");// вывод второго задания на консоль
+
             Console.WriteLine($"\nЗадание 3:");
             Rec(); // вывод третьего задания на консоль            
             var For = new Program2(); // вывод третьего задания на консоль (новым классом)
