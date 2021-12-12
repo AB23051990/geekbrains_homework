@@ -3,7 +3,6 @@ using System.Diagnostics;
 
 namespace HomeWork11
 {
-
     class Menu
     {        
         static void Main(string[] args)
