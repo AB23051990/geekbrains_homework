@@ -7,7 +7,7 @@ namespace HomeWork10
     /// Задание 1 Напишите на C# функцию согласно блок-схеме
     /// </summary>
     /// <param name="args"></param>
-    class Lesson1
+    class Less1
     {
         public void Les1()
         {
@@ -77,7 +77,7 @@ namespace HomeWork10
     /// То есть для F(2) будет F(2) = F(0) + F(1) = 0 + 1 = 1.
     /// F(3) будет F(3) = F(1) + F(2) = 1 + 1 = 2.
     /// /// </summary>
-    class Lesson3
+    class Less3
     {
         public void Rec()
         {
@@ -94,7 +94,7 @@ namespace HomeWork10
             Console.WriteLine($"число Фибоначчи (рекурсивная версия) = {fib1},{fib2},{fib3},{fib4},{fib5}\n"); // вывод заначений на консоль            
         }
     }
-    class Lesson4
+    class Less4
     {
         public void For()
         {

@@ -24,7 +24,7 @@ namespace HomeWork
                     {
                         Process.GetCurrentProcess().Kill();
                     }
-                    if (menu == 1)//команда выводит на консоль практическую работу № 1 ссылаясь на классы (Lesson-1, Lesson-3, Lesson-4)
+                    if (menu == 1)//команда выводит на консоль практическую работу № 1 ссылаясь на классы (Less1, Less3, Less4)
                     {
                         Console.WriteLine($"Практическая работа №1 (колличество заданий '3')" + "\nДля выбора задания введите его номер '1', '2'...");
                         string work1 = Console.ReadLine();
@@ -32,7 +32,7 @@ namespace HomeWork
                         if (menu1 == 1)//команда выводит на консоль задание № 1 ссылаясь на Класс Lesson-1
                         {
                             Console.WriteLine($"\nЗадание № 1:");
-                            var les1 = new Lesson1();
+                            var les1 = new Less1();
                             les1.Les1();
                             Console.WriteLine(les1);
                         }
@@ -44,10 +44,10 @@ namespace HomeWork
                         if (menu1 == 3)//команда выводит на консоль задание № 3 ссылаясь на Класс (Lesson-3, Lesson-4)
                         {
                             Console.WriteLine($"\nЗадание № 3:");
-                            var rec = new Lesson3();
+                            var rec = new Less3();
                             rec.Rec();
                             Console.WriteLine(rec);
-                            var for1 = new Lesson4();
+                            var for1 = new Less4();
                             for1.For();
                             Console.WriteLine(for1);
                         }
