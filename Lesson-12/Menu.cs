@@ -6,7 +6,6 @@ using HomeWork10;
 
 namespace HomeWork
 {
-
     class Menu
     {
         static void Main(string[] args)
