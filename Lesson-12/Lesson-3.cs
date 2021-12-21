@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using AlgorithmsAndDataStructures.GeneralClass;
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Running;
 
@@ -19,56 +20,31 @@ namespace HomeWork12
     /// </summary>
     public struct PointStructDouble  // структура PointStructDouble (это значимый тип)
     {
-        public double X1;
-        public double Y1;
+        public double X;
+        public double Y;
     }
-    public class PointClassDouble // класс PointClassDouble (это ссылочный тип)
+    
+    class Less6 : GeneralClass
     {
-        public double X2;
-        public double Y2;
-    }
-    class Point
-    {
-
         public static readonly int PointMassOne = 100000; // размер массива данных 
         public static PointStructDouble[] masD = new PointStructDouble[PointMassOne + 1]; // объявляем массивы с данными
 
-        public static readonly int PointMassTwo = 200000; // размер массива данных 
-        public static PointStructDouble[] masF = new PointStructDouble[PointMassTwo + 1]; // объявляем массивы с данными
-
+        public string Name => throw new NotImplementedException();
 
         public static double PointStructD(PointStructDouble pointOne, PointStructDouble pointTwo) // Метод расчёта типа double (значимый тип)
         {
-            double x = pointOne.X1 - pointTwo.X1;
-            double y = pointOne.Y1 - pointTwo.Y1;
+            double x = pointOne.X - pointTwo.X;
+            double y = pointOne.Y - pointTwo.Y;
             return Math.Sqrt((x * x) + (y * y));
         }
-        public static double PointClassD(PointClassDouble pointOne, PointClassDouble pointTwo) // Метод расчёта типа double (ссылочный тип)
+        public void Less()
         {
-            double x = pointOne.X2 - pointTwo.X2;
-            double y = pointOne.Y2 - pointTwo.Y2;
-            return Math.Sqrt((x * x) + (y * y));
-        }
-        public void PointW()
-        {
-            // не получается задать произвольные координаты точек!
-            // метод взял из интернета но реализовать реализовать (ссылочный тип) не получается!
-            // ввод [Benchmark] реализовать не успел!
-
-            /*
-            Random rnd1 = new Random(); // создание пременной для случайных чисел
-            for (int i = 0; i <= PointMassTwo; i++) // заполняем массив случайными данными 
-            {
-                masF[i].X2 = rnd1.NextDouble();
-                masF[i].Y2 = rnd1.NextDouble();
-            }*/
-
             Random rnd = new Random(); // создание пременной для случайных чисел
 
             for (int i = 0; i <= PointMassOne; i++) // заполняем массив случайными данными (значимый тип)
             {
-                masD[i].X1 = rnd.NextDouble();
-                masD[i].Y1 = rnd.NextDouble();
+                masD[i].X = rnd.NextDouble();
+                masD[i].Y = rnd.NextDouble();
             }
             Stopwatch stopWatch = new Stopwatch();// расчёты 
 
@@ -80,24 +56,11 @@ namespace HomeWork12
             stopWatch.Stop();
             long milisek3 = stopWatch.ElapsedMilliseconds;
 
-            /*
-            stopWatch.Restart();// (ссылочный тип) реализовать не получается
-            for (int i = 0; i < PointMassTwo; i++)
-            {
-                _ = PointClassD(masF[i], masF[i + 1]);
-            }
-            stopWatch.Stop();
-            long milisek4 = stopWatch.ElapsedMilliseconds;
-            */
-
             // результаты
+            Console.WriteLine($"\nЗадание № 1:");
             Console.WriteLine($"Количество точек | PointStructDouble | PointClassDouble | Ratio");
             Console.WriteLine($"100000           |         X1        |        Y1        |" + milisek3.ToString());
-            Console.WriteLine($"200000           |         X2        |        Y2        |" /*+ milisek4.ToString()*/);
             _ = Console.ReadLine();
-
-        }
-        
-
+        }     
     }
 }
