@@ -211,9 +211,9 @@ namespace HomeWork13
         /// </summary>
         /// <param name="data">Значение для поиска</param>
         /// <returns></returns>
-        public DoubleTree Find(long data)
+        public DoubleTree Find(long data)//Положить корень дерева в очередь.
         {
-            if (Data == data) return this;
+            if (Data == data) return this; //Если очередь пуста, завершить работу алгоритма.
             if (Data > data)
             {
                 return Find(data, Left);
@@ -237,7 +237,6 @@ namespace HomeWork13
             }
             return Find(data, node.Right);
         }
-
         /// <summary>
         /// Количество элементов в дереве
         /// </summary>
@@ -308,19 +307,15 @@ namespace HomeWork13
         {
             Console.WriteLine($"\nЗадание № 1:");
             var tree = new DoubleTree();
-            tree.Insert(20);
-            tree.Insert(40);
             tree.Insert(10);
-            tree.Insert(30);
-            tree.Insert(80);
-            tree.Insert(29);
-            tree.Insert(31);
-            tree.Insert(32);
-            tree.Insert(70);
-            DoubleTreeExtensions.Print(tree);
-            tree.Remove(40);
-            DoubleTreeExtensions.Print(tree);
-            tree.Remove(20);
+            tree.Insert(100);
+            tree.Insert(1);
+            tree.Insert(4);
+            tree.Insert(50);
+            tree.Insert(0);
+            tree.Insert(19);
+            tree.Insert(45);
+            tree.Insert(17);
             DoubleTreeExtensions.Print(tree);
         }
     }
