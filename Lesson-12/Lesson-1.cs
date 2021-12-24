@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AlgorithmsAndDataStructures.GeneralClass;
+using System;
 
 namespace HomeWork10
 {
@@ -7,10 +8,13 @@ namespace HomeWork10
     /// Задание 1 Напишите на C# функцию согласно блок-схеме
     /// </summary>
     /// <param name="args"></param>
-    class Less1
+    class Less1: GeneralClass
     {
-        public void Les1()
+        public string Name => throw new NotImplementedException();
+                
+        public void Less()
         {
+            Console.WriteLine($"\nЗадание № 1:");
             Console.WriteLine($"Введите число");
             int number = Int32.Parse(Console.ReadLine());
             int d = 0;
@@ -41,11 +45,15 @@ namespace HomeWork10
     /// </summary>
     /// <param name="inputArray"></param>
     /// <returns></returns>
-    class Lesson2
+    class Less2 : GeneralClass
     {
-        public static int StrangeSum(int[] inputArray)
+        public string Name => throw new NotImplementedException();               
+
+        public void Less()
         {
-            int sum = 0; // O(1)
+            Console.WriteLine($"\nЗадание № 2:");
+            Console.WriteLine($"Асимптотическая сложность функции = O(5 + N^3).");
+            /*int sum = 0; // O(1)
             for (int i = 0; i < inputArray.Length; i++) // O(N)
             {
                 for (int j = 0; j < inputArray.Length; j++) // O(N)
@@ -62,7 +70,8 @@ namespace HomeWork10
                 }
             }
             return sum; // O(1)
-        } // Асимптотическая сложность функции = O(5 + N^3).
+            Асимптотическая сложность функции = O(5 + N^3).*/
+        }
     }
     /// <summary>
     /// Задание 3 Реализуйте функцию вычисления числа Фибоначчи
@@ -77,9 +86,11 @@ namespace HomeWork10
     /// То есть для F(2) будет F(2) = F(0) + F(1) = 0 + 1 = 1.
     /// F(3) будет F(3) = F(1) + F(2) = 1 + 1 = 2.
     /// /// </summary>
-    class Less3
+    class Less3 : GeneralClass
     {
-        public void Rec()
+        public string Name => throw new NotImplementedException();
+
+        public void Less()
         {
             int Fibonachi(int n)// 1. Реализовать рекурсивную версию
             {
@@ -91,12 +102,15 @@ namespace HomeWork10
             int fib3 = Fibonachi(3);
             int fib4 = Fibonachi(4);
             int fib5 = Fibonachi(5);
-            Console.WriteLine($"число Фибоначчи (рекурсивная версия) = {fib1},{fib2},{fib3},{fib4},{fib5}\n"); // вывод заначений на консоль            
-        }
+            Console.WriteLine($"\nЗадание № 3:");
+            Console.WriteLine($"число Фибоначчи (рекурсивная версия) = {fib1},{fib2},{fib3},{fib4},{fib5}\n"); // вывод заначений на консоль
+        }        
     }
-    class Less4
+    class Less4 : GeneralClass
     {
-        public void For()
+        public string Name => throw new NotImplementedException();        
+
+        public void Less()
         {
             int Fibonachi2(int n)//2. Реализовать версию без рекурсии(через цикл)
             {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AlgorithmsAndDataStructures.GeneralClass;
+using System;
 
 namespace HomeWork11
 {
@@ -21,11 +22,14 @@ namespace HomeWork11
         void RemoveNode(Node node); // удаляет указанный элемент
         Node FindNode(int searchValue); // ищет элемент по его значению
     }
-    class NodeList // выполнил по подобию из видео Arifa в телеграмме
+    class Less5 : GeneralClass // выполнил по подобию из видео Arifa в телеграмме
     {
         private Node head;
         private Node tail;
         public int Length { get; private set; }
+
+        public string Name => throw new NotImplementedException();
+
         public void AddNode(int value) // добавляет новый элемент списка
         {
             Node newNode = new Node();
@@ -70,8 +74,18 @@ namespace HomeWork11
             {
                 list += $"Элемент|{current.Value}|,";
                 current = current.NextNode;
-            }
+            } 
             Console.WriteLine(list);
+        }
+
+        public void Less()
+        {
+            Console.WriteLine($"\nЗадание № 1:");
+            Less5 myList = new Less5();
+            myList.AddNode(5464);
+            myList.AddNode(6468);
+            myList.AddNode(4496);
+            myList.PrintList();
         }
     }
 }
