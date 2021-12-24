@@ -74,9 +74,7 @@ namespace HomeWork11
             {
                 list += $"Элемент|{current.Value}|,";
                 current = current.NextNode;
-            }
-            
-            
+            } 
             Console.WriteLine(list);
         }
 
