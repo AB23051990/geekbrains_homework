@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.Utils.CommonDialogs.Internal;
+using System;
 using System.Diagnostics;
 
 namespace HomeWork_6
@@ -82,5 +83,9 @@ namespace HomeWork_6
             textBox1.Text = fileText;
             MessageBox.Show("Файл открыт");
         }
+    }
+
+    public class Form
+    {
     }
 }

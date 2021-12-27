@@ -6,8 +6,8 @@ using System.Diagnostics;
 namespace HomeWork14
 {
     /// <summary>
-    /// Задание 1 
-    /// Реализуйте методы поиска в дереве "поиск в ширину" и "поиск в глубину" с выводом каждого шага в консоль.    
+    /// Задание 1
+    /// Реализуйте методы поиска в дереве "поиск в ширину" и "поиск в глубину" с выводом каждого шага в консоль.
     /// </summary>
     internal class Tree<T>
     {
@@ -20,12 +20,11 @@ namespace HomeWork14
                 Root = node;
                 return;
             }
-                
             Node<T> nodeToAdd = GetLastNodeWithEmptyChildLink(Root);
             if (nodeToAdd.Left == null)
             {
-                nodeToAdd.Left = node;                
-            }                
+                nodeToAdd.Left = node;
+            }
             else
                 nodeToAdd.Right = node;
             node.Parent = nodeToAdd;
@@ -34,40 +33,36 @@ namespace HomeWork14
         {
             {
                 /*
-                 Аргументы метода:
-                 1. TreeNode node - текущий "элемент дерева" (ref  передача по ссылке)       
-                 2. ref string s - строка, в которой накапливается результат (ref - передача по ссылке)
+                Аргументы метода:
+                1. TreeNode node - текущий "элемент дерева" (ref передача по ссылке)
+                2. ref string s - строка, в которой накапливается результат (ref - передача по ссылке)
                 */
                 var queue = new Queue<Node<T>>(); // Положить корень дерева в очередь.
-
-                if (detailed) s += "    заносим в очередь значение " + node.Data.ToString() + Environment.NewLine; queue.Enqueue(node); // поместить в очередь первый уровень
+                if (detailed) s += " заносим в очередь значение " + node.Data.ToString() + Environment.NewLine; queue.Enqueue(node); // поместить в очередь первый уровень
                 while (queue.Count != 0) // пока очередь не пуста
                 {
                     //если у текущей ветви есть листья, их тоже добавить в очередь
                     if (queue.Peek().Left != null)
                     {
-                        if (detailed) s += "    заносим в очередь значение " + queue.Peek().Left.Data.ToString() + " из левого поддерева" + Environment.NewLine;
+                        if (detailed) s += " заносим в очередь значение " + queue.Peek().Left.Data.ToString() + " из левого поддерева" + Environment.NewLine;
                         queue.Enqueue(queue.Peek().Left);
                     }
                     if (queue.Peek().Right != null)
                     {
-                        if (detailed) s += "    заносим в очередь значение " + queue.Peek().Right.Data.ToString() + " из правого поддерева" + Environment.NewLine;
+                        if (detailed) s += " заносим в очередь значение " + queue.Peek().Right.Data.ToString() + " из правого поддерева" + Environment.NewLine;
                         queue.Enqueue(queue.Peek().Right);
                     }
                     //извлечь из очереди информационное поле последнего элемента
-                    if (detailed) s += "    извлекаем значение из очереди: " + queue.Peek().Data.ToString() + Environment.NewLine;
+                    if (detailed) s += " извлекаем значение из очереди: " + queue.Peek().Data.ToString() + Environment.NewLine;
                     else s += queue.Peek().Data.ToString() + " "; // убрать последний элемент очереди
                     queue.Dequeue();
                 }
             }
         }
-
         public void PrintTree()
         {
             PrintTree(0, Root);
-            Across();
-        }       
-
+        }
         public void PrintTree(int Level, Node<T> node)
         {
             Console.WriteLine($"{Level} - {node.Data}");
@@ -81,8 +76,7 @@ namespace HomeWork14
             if (root.Left == null || root.Right == null)
                 return root;
             return GetLastNodeWithEmptyChildLink(root.Left);
-        }     
-
+        }
     }
     public class Node<T>
     {
@@ -97,8 +91,7 @@ namespace HomeWork14
     }
     public class Less9 : GeneralClass
     {
-        public string Name => throw new NotImplementedException();
-
+        public string Name => throw new NotImplementedException();        
         public void Less()
         {
             Console.WriteLine($"\nЗадание № 1:");
@@ -114,4 +107,3 @@ namespace HomeWork14
         }
     }
 }
-    

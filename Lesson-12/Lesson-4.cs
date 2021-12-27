@@ -7,7 +7,7 @@ namespace HomeWork13
 {
     /// <summary>
     /// Задание 1 (метод скопировал с интернета)
-    /// Реализуйте класс двоичного дерева поиска с операциями вставки, удаления, поиска. Также напишите метод вывода в консоль дерева, чтобы увидеть, насколько корректно работает ваша реализация.    
+    /// Реализуйте класс двоичного дерева поиска с операциями вставки, удаления, поиска. Также напишите метод вывода в консоль дерева, чтобы увидеть, насколько корректно работает ваша реализация.
     /// </summary>
     public enum BinSide
     {
@@ -46,7 +46,6 @@ namespace HomeWork13
                 Insert(data, Right, this);
             }
         }
-
         /// <summary>
         /// Вставляет значение в определённый узел дерева
         /// </summary>
@@ -55,7 +54,6 @@ namespace HomeWork13
         /// <param name="parent">Родительский узел</param>
         private void Insert(long data, DoubleTree node, DoubleTree parent)
         {
-
             if (node.Data == null || node.Data == data)
             {
                 node.Data = data;
@@ -81,7 +79,6 @@ namespace HomeWork13
         /// <param name="parent">Родительский узел</param>
         private void Insert(DoubleTree data, DoubleTree node, DoubleTree parent)
         {
-
             if (node.Data == null || node.Data == data.Data)
             {
                 node.Data = data.Data;
@@ -113,7 +110,6 @@ namespace HomeWork13
             if (node.Parent.Right == node) return BinSide.Right;
             return null;
         }
-
         /// <summary>
         /// Удаляет узел из дерева
         /// </summary>
@@ -165,11 +161,9 @@ namespace HomeWork13
                 node.Left.Parent = node.Parent;
                 return;
             }
-
             //Если присутствуют оба дочерних узла
             //то правый ставим на место удаляемого
             //а левый вставляем в правый
-
             if (me == BinSide.Left)
             {
                 node.Parent.Left = node.Right;
@@ -278,7 +272,7 @@ namespace HomeWork13
                 {
                     if (node.Parent.Left == node)
                     {
-                        Console.WriteLine("Left for {1}  --> {0}", node.Data, node.Parent.Data);
+                        Console.WriteLine("Left for {1} --> {0}", node.Data, node.Parent.Data);
                     }
 
                     if (node.Parent.Right == node)
@@ -350,7 +344,6 @@ namespace HomeWork13
             string time = $"{ts.Hours}:{ts.Minutes}:{ts.Seconds}:{ts.Milliseconds / 10}";
             Console.WriteLine($"\nЗадание № 2:");
             Console.WriteLine("RunTime " + time);
-        } 
+        }
     }
 }
-

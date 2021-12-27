@@ -5,7 +5,7 @@ namespace HomeWork11
 {
     /// <summary>
     /// Практическая работа №2
-    /// Задание №1 Двусвязный список Требуется реализация типа двусвязного списка. И контрольный пример, демонстрирующий использование методов. Интерактивный режим (взаимодействие с пользователем) не требуется.    /// 
+    /// Задание №1 Двусвязный список Требуется реализация типа двусвязного списка. И контрольный пример, демонстрирующий использование методов. Интерактивный режим (взаимодействие с пользователем) не требуется. ///
     /// </summary>
     class Node // создаёт класс "Узел"
     {
@@ -27,9 +27,7 @@ namespace HomeWork11
         private Node head;
         private Node tail;
         public int Length { get; private set; }
-
         public string Name => throw new NotImplementedException();
-
         public void AddNode(int value) // добавляет новый элемент списка
         {
             Node newNode = new Node();
@@ -74,10 +72,9 @@ namespace HomeWork11
             {
                 list += $"Элемент|{current.Value}|,";
                 current = current.NextNode;
-            } 
+            }
             Console.WriteLine(list);
         }
-
         public void Less()
         {
             Console.WriteLine($"\nЗадание № 1:");

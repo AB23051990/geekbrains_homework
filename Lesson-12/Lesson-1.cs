@@ -8,10 +8,9 @@ namespace HomeWork10
     /// Задание 1 Напишите на C# функцию согласно блок-схеме
     /// </summary>
     /// <param name="args"></param>
-    class Less1: GeneralClass
+    class Less1 : GeneralClass
     {
         public string Name => throw new NotImplementedException();
-                
         public void Less()
         {
             Console.WriteLine($"\nЗадание № 1:");
@@ -32,7 +31,7 @@ namespace HomeWork10
             }
             if (d == 0)
             {
-                Console.WriteLine($"число '{number}' простое\n");// вывод первого задания на консоль 
+                Console.WriteLine($"число '{number}' простое\n");// вывод первого задания на консоль
             }
             else
             {
@@ -47,8 +46,7 @@ namespace HomeWork10
     /// <returns></returns>
     class Less2 : GeneralClass
     {
-        public string Name => throw new NotImplementedException();               
-
+        public string Name => throw new NotImplementedException();
         public void Less()
         {
             Console.WriteLine($"\nЗадание № 2:");
@@ -56,18 +54,18 @@ namespace HomeWork10
             /*int sum = 0; // O(1)
             for (int i = 0; i < inputArray.Length; i++) // O(N)
             {
-                for (int j = 0; j < inputArray.Length; j++) // O(N)
-                {
-                    for (int k = 0; k < inputArray.Length; k++) // O(N)
-                    {
-                        int y = 0; // O(1)
-                        if (j != 0) // O(1)
-                        {
-                            y = k / j;
-                        }
-                        sum += inputArray[i] + i + k + j + y; // O(1)
-                    }
-                }
+            for (int j = 0; j < inputArray.Length; j++) // O(N)
+            {
+            for (int k = 0; k < inputArray.Length; k++) // O(N)
+            {
+            int y = 0; // O(1)
+            if (j != 0) // O(1)
+            {
+            y = k / j;
+            }
+            sum += inputArray[i] + i + k + j + y; // O(1)
+            }
+            }
             }
             return sum; // O(1)
             Асимптотическая сложность функции = O(5 + N^3).*/
@@ -89,7 +87,6 @@ namespace HomeWork10
     class Less3 : GeneralClass
     {
         public string Name => throw new NotImplementedException();
-
         public void Less()
         {
             int Fibonachi(int n)// 1. Реализовать рекурсивную версию
@@ -104,12 +101,11 @@ namespace HomeWork10
             int fib5 = Fibonachi(5);
             Console.WriteLine($"\nЗадание № 3:");
             Console.WriteLine($"число Фибоначчи (рекурсивная версия) = {fib1},{fib2},{fib3},{fib4},{fib5}\n"); // вывод заначений на консоль
-        }        
+        }
     }
     class Less4 : GeneralClass
     {
-        public string Name => throw new NotImplementedException();        
-
+        public string Name => throw new NotImplementedException();
         public void Less()
         {
             int Fibonachi2(int n)//2. Реализовать версию без рекурсии(через цикл)

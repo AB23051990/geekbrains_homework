@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
 using AlgorithmsAndDataStructures.GeneralClass;
-using BenchmarkDotNet.Attributes;
-using BenchmarkDotNet.Running;
 
 namespace HomeWork12
 {
@@ -18,19 +16,16 @@ namespace HomeWork12
     /// 100000 | x1 | y1| y1/x1
     /// 200000 | x2 | y2 | y2/x2
     /// </summary>
-    public struct PointStructDouble  // структура PointStructDouble (это значимый тип)
+    public struct PointStructDouble // структура PointStructDouble (это значимый тип)
     {
         public double X;
         public double Y;
     }
-    
     class Less6 : GeneralClass
     {
-        public static readonly int PointMassOne = 100000; // размер массива данных 
+        public static readonly int PointMassOne = 100000; // размер массива данных
         public static PointStructDouble[] masD = new PointStructDouble[PointMassOne + 1]; // объявляем массивы с данными
-
         public string Name => throw new NotImplementedException();
-
         public static double PointStructD(PointStructDouble pointOne, PointStructDouble pointTwo) // Метод расчёта типа double (значимый тип)
         {
             double x = pointOne.X - pointTwo.X;
@@ -40,27 +35,23 @@ namespace HomeWork12
         public void Less()
         {
             Random rnd = new Random(); // создание пременной для случайных чисел
-
             for (int i = 0; i <= PointMassOne; i++) // заполняем массив случайными данными (значимый тип)
             {
                 masD[i].X = rnd.NextDouble();
                 masD[i].Y = rnd.NextDouble();
             }
-            Stopwatch stopWatch = new Stopwatch();// расчёты 
-
-            stopWatch.Restart();//  (значимый тип)
+            Stopwatch stopWatch = new Stopwatch();// расчёты
+            stopWatch.Restart();// (значимый тип)
             for (int i = 0; i < PointMassOne; i++)
             {
                 _ = PointStructD(masD[i], masD[i + 1]);
             }
             stopWatch.Stop();
             long milisek3 = stopWatch.ElapsedMilliseconds;
-
-            // результаты
-            Console.WriteLine($"\nЗадание № 1:");
+            Console.WriteLine($"\nЗадание № 1:");// результаты
             Console.WriteLine($"Количество точек | PointStructDouble | PointClassDouble | Ratio");
-            Console.WriteLine($"100000           |         X1        |        Y1        |" + milisek3.ToString());
+            Console.WriteLine($"100000 | X1 | Y1 |" + milisek3.ToString());
             _ = Console.ReadLine();
-        }     
+        }
     }
 }
