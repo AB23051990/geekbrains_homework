@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>HomeWork_14</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Work1">
+      <HintPath>Work1.dll</HintPath>
+    </Reference>
+    <Reference Include="Work2">
+      <HintPath>Work2.dll</HintPath>
+    </Reference>
+    <Reference Include="Work3">
+      <HintPath>Work3.dll</HintPath>
+    </Reference>
+    <Reference Include="Work4">
+      <HintPath>Work4.dll</HintPath>
+    </Reference>
+    <Reference Include="Work5">
+      <HintPath>Work5.dll</HintPath>
+    </Reference>
+    <Reference Include="Work6">
+      <HintPath>Work6.dll</HintPath>
+    </Reference>
+    <Reference Include="Work7">
+      <HintPath>Work7.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

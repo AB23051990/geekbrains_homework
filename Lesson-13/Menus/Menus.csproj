@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -18,7 +18,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ExampleLibrary\ExampleLibrary.csproj" />
+    <ProjectReference Include="..\Work1\Work1.csproj" />
+    <ProjectReference Include="..\Work2\Work2.csproj" />
+    <ProjectReference Include="..\Work3\Work3.csproj" />
+    <ProjectReference Include="..\Work4\Work4.csproj" />
+    <ProjectReference Include="..\Work5\Work5.csproj" />
+    <ProjectReference Include="..\Work6\Work6.csproj" />
+    <ProjectReference Include="..\Work7\Work7.csproj" />
   </ItemGroup>
 
   <ItemGroup>
